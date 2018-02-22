@@ -3296,6 +3296,10 @@ react-devtools-core@^2.5.0:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
+"react-native-android-btserial@github:yhozen/react-native-android-btserial":
+  version "1.0.1"
+  resolved "https://codeload.github.com/yhozen/react-native-android-btserial/tar.gz/62d471f8c27a96bc2768b808110679be74a4c36e"
+
 react-native@0.50.3:
   version "0.50.3"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.50.3.tgz#91282bd5356cc7d794969cdc443cc764389b9af4"

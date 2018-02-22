@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { StyleSheet, Text, View, Button, ToastAndroid } from 'react-native'
 import BTSerial from 'react-native-android-btserial'
 
-export default class App extends Component<{}> {
+export default class App extends Component {
   state  = { devices: [], connected: false }
  
   render() {
@@ -18,21 +18,19 @@ export default class App extends Component<{}> {
                                 ToastAndroid.show('Successful!', ToastAndroid.SHORT)
                               })
 
-    const  getDevices = () => {
-      let _this = this
-      BTSerial.listDevices(function(err, BTdevices) {
+    const getDevices = () => {
+      BTSerial.listDevices((err, BTdevices) => {
         if (BTdevices) {
           let devices = Object.values(JSON.parse(BTdevices))
-          _this.setState({devices})
+          this.setState({devices})
         }
       })
     }
 
     const connect = (address) => {
-      let _this = this
-      BTSerial.connect(address, function(err, status, deviceName){
+      BTSerial.connect(address, (err, status, deviceName) => {
         if (status) {
-          _this.setState({connected: true})
+          this.setState({connected: true})
           ToastAndroid.show('Successful!', ToastAndroid.SHORT)
         }
       })
