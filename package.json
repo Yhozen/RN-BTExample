@@ -7,15 +7,15 @@
 		"test": "jest"
 	},
 	"dependencies": {
-		"react": "16.0.0",
-		"react-native": "0.50.3",
+		"react": "16.2.0",
+		"react-native": "0.53.3",
 		"react-native-android-btserial": "github:yhozen/react-native-android-btserial"
 	},
 	"devDependencies": {
-		"babel-jest": "21.2.0",
+		"babel-jest": "22.4.1",
 		"babel-preset-react-native": "4.0.0",
-		"jest": "21.2.1",
-		"react-test-renderer": "16.0.0"
+		"jest": "22.4.1",
+		"react-test-renderer": "16.2.0"
 	},
 	"jest": {
 		"preset": "react-native"
